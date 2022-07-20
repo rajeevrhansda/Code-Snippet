@@ -1,65 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Floating</title>
+    <title>Hover</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="code">
-            <pre>
-                .slider {
-                    display: flex;
-                    position: relative;
-                    justify-content: space-between;
-                    transition: 1s all ease-in-out;
-                }
-                .slider.active {
-                    background-color: black;
-                }
-                .ball {
-                    position: absolute;
-                    right: 1;
-                    background-color: black;
-                    transition: 1s all ease-in-out;
-                }
-                .ball.active {
-                    right: 0;
-                    background-color: white;
-                }
-
-                app.js
-
-                const ball = document.querySelector(".ball");
-                const slider = document.querySelector(".slider");
-                ball.addEventListener("click", ()=>{
-                    slider.classList.toggle("active");
-                    ball.classList.toggle("active");
-                });
-                select ball class document query selector
-                add event listener to the ball
-                toggle classlist
+    <div class="code">
+        <pre>
+            .content {
+                transition: all 0.5s ease-in-out;
+            }
             
-            
+            .content:hover {
+                background-color: black;
+                transform: scale(1.2);
+            }
         </pre>
-        </div>
-        <div class="sliderContainer">
-            <div class="slider">
-                <i class="icon1 fa-regular fa-sun"></i>
-                <i class="icon2 fa-solid fa-moon"></i>
-                <div class="ball"></div>
-            </div>
-        </div>
     </div>
-    <script src="app.js"></script>
+    <div class="container">
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+    </div>
+    
 </body>
-
 </html>
