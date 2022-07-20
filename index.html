@@ -14,22 +14,52 @@
 
 <body>
     <div class="container">
-       <div class="code">
-        <pre>           
-            .icon
-            {
-                color: white;
-                font-size: 50vw;
-            }
+        <div class="code">
+            <pre>
+                .slider {
+                    display: flex;
+                    position: relative;
+                    justify-content: space-between;
+                    transition: 1s all ease-in-out;
+                }
+                .slider.active {
+                    background-color: black;
+                }
+                .ball {
+                    position: absolute;
+                    right: 1;
+                    background-color: black;
+                    transition: 1s all ease-in-out;
+                }
+                .ball.active {
+                    right: 0;
+                    background-color: white;
+                }
+
+                app.js
+
+                const ball = document.querySelector(".ball");
+                const slider = document.querySelector(".slider");
+                ball.addEventListener("click", ()=>{
+                    slider.classList.toggle("active");
+                    ball.classList.toggle("active");
+                });
+                select ball class document query selector
+                add event listener to the ball
+                toggle classlist
             
-            for centering item
-            container must have height and width
+            
         </pre>
-       </div>
-        <div class="iconContainer">
-            <i class="icon fa-brands fa-airbnb"></i>
+        </div>
+        <div class="sliderContainer">
+            <div class="slider">
+                <i class="icon1 fa-regular fa-sun"></i>
+                <i class="icon2 fa-solid fa-moon"></i>
+                <div class="ball"></div>
+            </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>

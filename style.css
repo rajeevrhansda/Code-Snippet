@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid black;
 }
 
 .container {
     width: 100vw;
     height: fit-content;
-    
+
 }
-.iconContainer {
+
+.sliderContainer {
     background-color: tomato;
     display: flex;
     width: 100vw;
@@ -18,7 +18,46 @@
     align-items: center;
     justify-content: center;
 }
-.icon{
-    color: white;
-    font-size: 50vw;
+
+.slider {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: white;
+    width: 50%;
+    border-radius: 50px;
+    transition: 1s all ease-in-out;
+
+}
+
+.slider.active {
+    background-color: black;
+}
+
+.icon1 {
+    margin: .1em;
+    color: gold;
+    font-size: 100px;
+}
+
+.icon2 {
+    margin: .1em;
+    color: gold;
+    font-size: 100px;
+}
+
+.ball {
+    position: absolute;
+    right: 1;
+    margin: 10px;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 1s all ease-in-out;
+}
+
+.ball.active {
+    right: 0;
+    background-color: white;
 }
