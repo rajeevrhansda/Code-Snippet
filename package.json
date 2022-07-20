@@ -1,0 +1,19 @@
+{
+  "name": "materialui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeevrhansda/Code-Snippet.git"
+  },
+  "author": "Rajeev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajeevrhansda/Code-Snippet/issues"
+  },
+  "homepage": "https://github.com/rajeevrhansda/Code-Snippet#readme"
+}
