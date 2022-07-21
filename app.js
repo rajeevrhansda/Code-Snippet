@@ -1,22 +1,35 @@
-const arrow = document.querySelector(".arrow");
-const list = document.querySelector(".list");
-const img = document.querySelector("img");
-const imgSize = img.width + 20
+const dark  = document.querySelector(".dark");
+const light  = document.querySelector(".light");
+const night  = document.querySelector(".night");
+const sideMenu  = document.querySelector(".sideMenu");
+const logo  = document.querySelector(".logo");
+const logoTitle  = document.querySelector(".logoTitle");
+const centerLogo  = document.querySelector(".centerLogo");
+const centerLogoTitle  = document.querySelector(".centerLogoTitle");
 
-const imgLength = list.querySelectorAll("img").length;
-let clickCounter = 0;
-const ratio = Math.floor(window.innerWidth / img.width);
-const abc =  imgLength - ratio
+dark.addEventListener("click", ()=>{
+    sideMenu.className = "sideMenu"
+    logo.className = "logo"
+    logoTitle.className = "logoTitle"
+    centerLogo.className = "centerLogo"
+    centerLogoTitle.className = "centerLogoTitle"
+});
 
-arrow.addEventListener("click", () => {
-    clickCounter++;
-    if (clickCounter <= abc) {
-        list.style.transform = `translateX(${list.computedStyleMap().get("transform")[0].x.value - imgSize}px)`;
+light.addEventListener("click", ()=>{
+    sideMenu.className = "sideMenu light"
+    logo.className = "logo light"
+    logoTitle.className = "logoTitle light"
+    centerLogo.className = "centerLogo light"
+    centerLogoTitle.className = "centerLogoTitle light"
+});
 
-    } else {
-        list.style.transform = "translate(0)"
-        clickCounter = 0;
-    }
+night.addEventListener("click", ()=>{
+    sideMenu.className = "sideMenu night"
+    logo.className = "logo night"
+    logoTitle.className = "logoTitle night"
+    centerLogo.className = "centerLogo night"
+    centerLogoTitle.className = "centerLogoTitle night"
 });
 
 
+console.log(sideMenu);

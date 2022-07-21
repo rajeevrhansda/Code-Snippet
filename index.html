@@ -1,126 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Side Menu</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Floating</title>
-</head>
-
-<body>
-    <pre>
-        container
-            wrapper     position: relative for arrow
-                arrow   position: absolute
-                list
-                    listItem   position: relative for title and button
-                        img
-                        title  position:absolute
-                        button position:absolute
-
-        query select fa-arrow-right
-        add eventListener to arrow
-        add click counter
-        calculate ratio window width / image width
-        subtract no. of images by ratio
-        no. of click = remaining img
-    </pre>
+  <body>
     <div class="container">
-        <div class="wrapper">
-            <div class="list">
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1658239829031-6aa114b53702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1658144529357-3e4183e8e762?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1658163724548-29ef00812a54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1657419803250-fb5ad8e5f302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1658261783616-c0f76cdddaf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8Ym84alFLVGFFMFl8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1657949078309-ac600a0e94fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEzfGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-                <div class="listItem">
-                    <img src="https://images.unsplash.com/photo-1657805052690-7ddc57695d90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                        alt="">
-                    <span>TITLE</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quas?</p>
-                    <button>PLAY</button>
-                </div>
-
-
+      <div class="wrapper">
+        <div class="sideMenu">
+          <div class="sideMenuTop">
+            <div class="sideMenuTopItem">
+              <i class="logo fa-regular fa-gem"></i>
+              <p class="logoTitle">The App</p>
             </div>
-            <i class="arrow fa-solid fa-arrow-right"></i>
+          </div>
+          <div class="sideMenuCenter">
+            <div class="sideMenuCenterItem" id="1">
+              <i class="centerLogo fa-solid fa-house-chimney"></i>
+              <p class="centerLogoTitle">Dashboard</p>
+            </div>
+            <div class="sideMenuCenterItem active">
+              <i class="centerLogo fa-solid fa-magnifying-glass"></i>
+              <p class="centerLogoTitle">Search</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-chart-bar"></i>
+              <p class="centerLogoTitle">Insight</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-book"></i>
+              <p class="centerLogoTitle">Docs</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-users"></i>
+              <p class="centerLogoTitle">Community</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-toolbox"></i>
+              <p class="centerLogoTitle">Tools</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-cart-shopping"></i>
+              <p class="centerLogoTitle">Market</p>
+            </div>
+            <div class="sideMenuCenterItem">
+              <i class="centerLogo fa-solid fa-circle-question"></i>
+              <p class="centerLogoTitle">Resource</p>
+            </div>
+          </div>
+          <div class="sideMenuBottom">
+            <div class="sideMenuBottomItemDark">
+              <button class="dark"></button>
+            </div>
+            <div class="sideMenuBottomItemLight">
+              <button class="light"></button>
+            </div>
+            <div class="sideMenuBottomItemNight">
+              <button class="night"></button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-<div class="slides">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-    <img src=""
-        alt="">
-
-</div> -->

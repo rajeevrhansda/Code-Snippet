@@ -1,76 +1,187 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.wrapper{
-    position: relative;
-}
-.list{
-    display: flex;
-    height: 500px;
-    align-items: center;
-    transform: translateX(0);
-    transition: all 0.5s ease-in-out;
-}
-.listItem{
-    position: relative;
-    margin-left: 20px;
-}
-img{
-    transition: all 0.5s ease-in-out;
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-}
-img:hover{
-    transform: scale(1.1);
-    opacity: 0.5;
-}
-.listItem:hover span,
-.listItem:hover button,
-.listItem:hover p{
-    opacity: 1;
-}
-span{
-    background-color: gray;
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}.container{
     position: absolute;
-    top: 40%;
-    left: 20%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-p{
-    background-color: gray;
-    color: white;
-    position: absolute;
-    top: 50%;
-    width: 60%;
-    left: 20%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-
-button{
-    background-color: greenyellow;
-    color: white;
-    position: absolute;
-    top: 70%;
-    left: 20%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-.button:hover{
-    background-color: yellow;
-}
-
-
-.arrow{
-    color: white;
-    font-size: 100px;
-    position: absolute;
-    top: 40%;
     right: 0;
-    cursor: pointer;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    background-color: aqua;
+    max-width: 2000px;
 }
+
+/* ===================SIDE MENU START=============== */
+.sideMenu {
+  background-color: black;
+  width: fit-content;
+  height: 100%;
+  padding: max(.05vw, 1em) max(0.5vw, 2em);
+}
+
+/* ===================SIDE MENU TOP START=============== */
+.sideMenuTop {
+  border-bottom: 1px solid gray;
+}
+
+.sideMenuTopItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: max(.05vw, 1em) max(0.5vw, 1em);
+  cursor: pointer;
+}
+.logo {
+  color: white;
+  font-size: max(1vw , 20px);
+}
+
+.logoTitle {
+  font-size: max(1vw , 20px);
+  color: white;
+}
+
+/* ===================SIDE MENU TOP END=============== */
+
+/* ===================SIDE MENU CENTER START=============== */
+.sideMenuCenter {
+  border-bottom: 1px solid gray;
+}
+
+.sideMenuCenterItem {
+  display: flex;
+  gap: 1em;
+  padding: max(0.5vw, 1em) max(0.5vw, 1em);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.sideMenuCenterItem.active {
+  background-color: gray;
+}
+
+.centerLogo {
+  color: white;
+  font-size: max(1vw , 20px);
+
+}
+
+.centerLogoTitle {
+  color: white;
+  font-size: max(1vw , 20px);
+
+}
+/* ===================SIDE MENU CENTER END=============== */
+/* ===================SIDE MENU BOTTOM START=============== */
+.sideMenuBottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: max(0.5vw, 1em) max(0.5vw, 2em);
+}
+.dark {
+  background-color: black;
+  width: max(1.5vw,2em);
+  height: max(1.5vw,2em);
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.light {
+  background-color: white;
+  width: max(1.5vw,2em);
+  height: max(1.5vw,2em);
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.night {
+  background-color: midnightblue;
+  width: max(1.5vw,2em);
+  height: max(1.5vw,2em);
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* ===================THEME START=============== */
+/* ===================LIGHT THEME START=============== */
+
+.sideMenu.light{
+  background-color: white;
+}
+.logo.light {
+  color: black;
+}
+
+.logoTitle.light {
+  color: black;
+}
+
+.centerLogo.light {
+  color: black;
+}
+
+.centerLogoTitle.light {
+  color: black;
+}
+/* ===================LIGHT THEME END=============== */
+/* ===================NIGHT THEME START=============== */
+.sideMenu.night{
+  background-color: midnightblue;
+  
+
+}
+.logo.night {
+  color: white;
+}
+
+.logoTitle.night {
+  color: white;
+}
+
+.centerLogo.night {
+  color: white;
+
+}
+
+.centerLogoTitle.night {
+  color: white;
+
+}
+/* ===================NIGHT THEME END=============== */
+
+
+/* ===================THEME END=============== */
+
+
+/* ===================SIDE MENU BOTTOM END=============== */
+@media screen and (max-width: 768px) {
+  .sideMenuCenterItem {
+    padding: max(0.5vw, 1em) 0;
+    justify-content: center;
+  }
+  .logoTitle {
+    display: none;
+  }
+  .centerLogoTitle {
+    display: none;
+  }
+  .sideMenuBottom {
+    flex-direction: column;
+    padding: max(0.5vw, 1em) max(0.1vw, 0.5em);
+  }
+  .sideMenu{
+    padding: max(.05vw, 1em) 0;
+
+  }
+  .sideMenuTopItem{
+    padding: max(.05vw, 1em) 0;
+
+  }
+
+}
+
+/* ===================SIDE MENU END=============== */
